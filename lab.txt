@@ -1,0 +1,67 @@
+[student@workstation ~]$ lab-configure 
+
+This script configures the connection parameters to access the OpenShift cluster for your lab scripts
+
+ · Enter the API Endpoint: https://api.ap45.prod.nextcle.com:6443
+ · Enter the Username: iclawc
+ · Enter the Password: 704e52bae68c42518ee4
+ · Enter the GitHub Account Name: veerabose
+ · Enter the Quay.io Account Name: veeraabose
+
+You entered:
+ · API Endpoint:			https://api.ap45.prod.nextcle.com:6443
+ · Username:				iclawc
+ · Password:				704e52bae68c42518ee4
+ · GitHub Account Name:			veerabose
+ · Quay.io Account Name:		veeraabose
+
+Generated config:
+ · API Endpoint:			https://api.ap45.prod.nextcle.com:6443
+ · Wildcard Domain:			apps.ap45.prod.nextcle.com
+ · Nexus Server Host:			nexus-common.apps.ap45.prod.nextcle.com
+ · Username:				iclawc
+ · Password:				704e52bae68c42518ee4
+ · GitHub Account Name:			veerabose
+ · Quay.io Account Name:		veeraabose
+
+Verifying your API Endpoint...
+
+Verifying your Nexus host...
+
+Verifying your OpenShift developer user credentials...
+
+Verifying your GitHub account name...
+
+Verifying your Quay.io account name...
+
+Verifying your cluster configuration...
+
+Saving your lab configuration file...
+
+Saving your Maven settings file...
+
+All fine, lab config saved. You can now proceed with your exercises.
+
+If you need to modify the configuration, rerun this script or directly modify the values in /usr/local/etc/ocp4.config.
+
+[student@workstation ~]$ git clone https://github.com/veerabose/DO288-apps.git
+Cloning into 'DO288-apps'...
+remote: Enumerating objects: 1110, done.
+remote: Total 1110 (delta 0), reused 0 (delta 0), pack-reused 1110
+Receiving objects: 100% (1110/1110), 1.02 MiB | 0 bytes/s, done.
+Resolving deltas: 100% (271/271), done.
+[student@workstation ~]$ ls
+core.4873  Desktop  DO288-apps  Documents  Downloads  Music  Pictures  Public  Templates  Videos
+[student@workstation ~]$ cd DO288-apps/
+[student@workstation DO288-apps]$ ls
+app-config       hello-world-nginx  nexus3                probes           todo-api        trigger-builds
+books            html-helloworld    nodejs-helloworld     quip             todo-api-micro  ubi-echo
+build-app        java-serverhost    php-hello-dockerfile  quotes           todo-backend    ubi-info
+container-build  LICENSE            php-helloworld        README.md        todo-frontend   ubi-sleep
+go-hello         micro-java         php-scale             s2i-scripts      todo-single
+hello-java       movies             post-commit           simple-pipeline  todo-ssr
+[student@workstation DO288-apps]$ head README.md 
+# DO288 Containerized Example Applications
+
+This repository contains a collection of sample containerized applications.  To complete the course you need to fork this repo into your personal Github account.[student@workstation DO288-apps]$ 
+
